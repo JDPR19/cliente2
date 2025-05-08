@@ -35,8 +35,8 @@ export default function tasKForm () {
                 body: JSON.stringify(task),
 
             });
-            // const data = await response.json();
-            // console.log(data);
+            const data = await response.json();
+            console.log(data);
         }else{
 
         await fetch('https://servidor-production-7090.up.railway.app/tasks', {
@@ -54,7 +54,7 @@ export default function tasKForm () {
 
 
     const loadTask =async(id) => {
-    const res = await fetch(`http://localhost:4000/tasks/${id}`)
+    const res = await fetch(`https://servidor-production-7090.up.railway.app/tasks/${id}`)
     const data =await res.json()
     setTask({title: data.title, description: data.description})
     setEditar(true)
