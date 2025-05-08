@@ -10,14 +10,14 @@ export default function tasKList () {
     
     
     const loadTasks = async () => {
-        const response = await fetch('http://localhost:4000/tasks');
+        const response = await fetch('https://servidor-production-7090.up.railway.app/tasks');
         const data = await response.json()
         setTasks(data)
     }
 
     const eliminaTarea = async (id) =>{
     try {
-        await fetch(`http://localhost:4000/tasks/${id}`, {
+        await fetch(`https://servidor-production-7090.up.railway.app/tasks/${id}`, {
             method: "DELETE",
         })
         setTasks(

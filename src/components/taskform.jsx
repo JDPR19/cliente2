@@ -27,7 +27,7 @@ export default function tasKForm () {
         setLoading(true)
 
         if(editar){
-        const response = await fetch(`http://localhost:4000/tasks/${parametro.id}`, {
+        const response = await fetch(`https://servidor-production-7090.up.railway.app/tasks/${parametro.id}`, {
                 method: "PUT",
                 headers: {
                     "Content-type":"application/json",
@@ -39,7 +39,7 @@ export default function tasKForm () {
             // console.log(data);
         }else{
 
-        await fetch('http://localhost:4000/tasks', {
+        await fetch('https://servidor-production-7090.up.railway.app/tasks', {
             method:'POST',
             body: JSON.stringify(task),
             headers: {"Content-Type": "application/json"},
